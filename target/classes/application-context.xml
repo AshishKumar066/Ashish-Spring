@@ -7,12 +7,14 @@
 
 	<bean name="emp1" class="learning.spring.model.Employee">
 
-		<property name="id" value="1011" />
-		<property name="name" value="Anu" />
-		<property name="gender" value="Male" />
-
+		<property name="id" value="1011"/>
+		<property name="name" value="Anu"/>
+		<property name="gender" value="Male"/>
+		<property name="address" value="Male"/>
+		
 	</bean>
 
+<!--	
 	<bean name="emp2" class="learning.spring.model.Employee">
 	
 	<constructor-arg name="id" value="222" />
@@ -20,5 +22,6 @@
 	<constructor-arg name="gender" value="Male" />
 	
 	</bean>
+-->
 
 </beans>
