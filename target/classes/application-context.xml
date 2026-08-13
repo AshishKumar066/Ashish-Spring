@@ -4,24 +4,40 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean definitions here -->
+	<!--Gatter/Setter Use !-->
+
+	<bean name="add1" class="learning.spring.model.Address">
+		<property name="city" value="puna" />
+		<property name="state" value="Maharashtra" />
+	</bean>
+
 
 	<bean name="emp1" class="learning.spring.model.Employee">
 
-		<property name="id" value="1011"/>
-		<property name="name" value="Anu"/>
-		<property name="gender" value="Male"/>
-		<property name="address" value="Male"/>
-		
+		<property name="id" value="1011" />
+		<property name="name" value="Anu" />
+		<property name="gender" value="Male" />
+		<property name="address" ref="add1" />
+
 	</bean>
 
-<!--	
-	<bean name="emp2" class="learning.spring.model.Employee">
-	
-	<constructor-arg name="id" value="222" />
-	<constructor-arg name="name" value="Ashish" />
-	<constructor-arg name="gender" value="Male" />
-	
+
+	<!--Constructore Use ! -->
+
+	<bean name="add2" class="learning.spring.model.Address">
+		<property name="city" value="Noida" />
+		<property name="state" value="UP" />
 	</bean>
--->
+
+
+	<bean name="emp2" class="learning.spring.model.Employee">
+
+		<constructor-arg name="id" value="222" />
+		<constructor-arg name="name" value="Ashish" />
+		<constructor-arg name="gender" value="Male" />
+		<constructor-arg name="address" ref="add2" />
+
+	</bean>
+
 
 </beans>
