@@ -8,8 +8,11 @@ public class Employee {
 	private String name;
 	private String gender;
 
+	
+//	if we can't create a no argument constructor then it can bee show an acception 
 	public Employee() {
-		super();
+		System.out.println("Employee.Employee()");
+		
 	}
 
 	public Employee(int id, String name, String gender) {
@@ -17,13 +20,17 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
+		System.out.println("Employee.Employee()");
 	}
 
 	public int getId() {
 		return id;
 	}
 
+//	if we can't declare this setter then it showing an axeption 
+	
 	public void setId(int id) {
+		System.out.println("Employee.setId()");
 		this.id = id;
 	}
 
@@ -32,6 +39,7 @@ public class Employee {
 	}
 
 	public void setName(String name) {
+		System.out.println("Employee.setName()");
 		this.name = name;
 	}
 
@@ -40,6 +48,7 @@ public class Employee {
 	}
 
 	public void setGender(String gender) {
+		System.out.println("Employee.setGender()");
 		this.gender = gender;
 	}
 
