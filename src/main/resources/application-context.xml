@@ -6,36 +6,127 @@
 	<!-- bean definitions here -->
 	<!--Gatter/Setter Use !-->
 
-	<bean name="add1" class="learning.spring.model.Address">
+	<bean
+		name="add1" class="learning.spring.model.Address">
 		<property name="city" value="puna" />
 		<property name="state" value="Maharashtra" />
 	</bean>
 
 
-	<bean name="emp1" class="learning.spring.model.Employee">
+	<bean
+		name="emp1" class="learning.spring.model.Employee">
 
 		<property name="id" value="1011" />
 		<property name="name" value="Anu" />
 		<property name="gender" value="Male" />
 		<property name="address" ref="add1" />
 
+		<property name="List">
+
+			<list>
+
+				<value>Hello</value>
+				<value>89</value>
+				<value>34</value>
+				<value>76</value>
+				<value>15</value>
+				<value>null</value>
+				<value>23</value>
+				<value>65</value>
+
+			</list>
+
+		</property>
+
+
+		<property name="set">
+
+			<set>
+
+				<value>12293</value>
+				<value>12</value>
+				<value>122</value>
+				<value>1229</value>
+				<value>2293</value>
+				<value>293</value>
+				<value>93</value>
+				<value>3</value>
+				<value>12</value>
+				<value>12293</value>
+
+			</set>
+		</property>
+
+
+		<property name="map">
+
+			<map>
+				<entry key="1" value="One" />
+				<entry key="2" value="Two" />
+				<entry key="3" value="Three" />
+				<entry key="4" value="Four" />
+				<entry key="5" value="Five" />
+				<entry key="6" value="Six" />
+				<entry key="7" value="Sevin" />
+				<entry key="8" value="Eight" />
+				<entry key="5" value="five" />
+				<entry key="2" value="two" />
+
+			</map>
+		</property>
+
+
 	</bean>
 
 
 	<!--Constructore Use ! -->
 
-	<bean name="add2" class="learning.spring.model.Address">
+	<bean
+		name="add2" class="learning.spring.model.Address">
 		<property name="city" value="Noida" />
 		<property name="state" value="UP" />
 	</bean>
 
 
-	<bean name="emp2" class="learning.spring.model.Employee">
+	<bean name="emp2"
+		class="learning.spring.model.Employee">
 
 		<constructor-arg name="id" value="222" />
 		<constructor-arg name="name" value="Ashish" />
 		<constructor-arg name="gender" value="Male" />
 		<constructor-arg name="address" ref="add2" />
+
+
+		<constructor-arg name="List">
+			<list>
+				<value>Hello</value>
+				<value>123</value>
+				<value>321</value>
+				<value>123</value>
+				<value>null</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg name="Set">
+			<set>
+				<value>123</value>
+				<value>12</value>
+				<value>32</value>
+				<value>11</value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg name="Map">
+			<map>
+				<entry key="1" value="Ashish" />
+				<entry key="2" value="Stark" />
+				<entry key="3" value="Tom" />
+				<entry key="4" value="Shan" />
+				<entry key="5" value="Shin" />
+
+			</map>
+		</constructor-arg>
+
 
 	</bean>
 

@@ -20,7 +20,6 @@ public class Main {
 //		Constructor base declaration is required for every parameter based 
 		Employee bean2 = ioc.getBean("emp2",Employee.class);
 		System.out.println(bean2);
-		
 	}
 
 }
