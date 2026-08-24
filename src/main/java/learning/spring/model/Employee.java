@@ -40,12 +40,11 @@ public class Employee {
 		this.set = set;
 		this.map = map;
 	}
-	
+
 	public List<String> getList() {
 		return list;
 	}
- 
-	
+
 //	public Employee(int id, String name, String gender, Address address) {
 //	super();
 //	System.out.println("Employee.Employee()");
@@ -79,7 +78,6 @@ public class Employee {
 		return id;
 	}
 
-	
 //	if we can't declare this setter then it showing an axeption 
 
 	public Address getAddress() {
