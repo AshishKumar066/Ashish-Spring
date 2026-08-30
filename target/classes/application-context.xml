@@ -4,8 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean definitions here -->
+<!--Updation through the scope="prototype "-->
+	<!--<bean name="emp1" class="learning.spring.model.Employee" scope="prototype">    OR -->	
+	
+	<bean name="emp1" class="learning.spring.model.Employee" scope="singleton">
 
-	<bean name="emp1" class="learning.spring.model.Employee">
 
 		<property name="id" value="1011" />
 		<property name="name" value="Anu" />
