@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?mxl version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
@@ -14,11 +14,11 @@
 	</bean>
 
 	<bean name="emp2" class="learning.spring.model.Employee">
-	
-	<constructor-arg name="id" value="222" />
-	<constructor-arg name="name" value="Ashish" />
-	<constructor-arg name="gender" value="Male" />
-	
+
+		<constructor-arg name="id" value="222" />
+		<constructor-arg name="name" value="Ashish" />
+		<constructor-arg name="gender" value="Male" />
+
 	</bean>
 
 </beans>

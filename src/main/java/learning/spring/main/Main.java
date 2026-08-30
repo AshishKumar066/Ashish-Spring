@@ -10,17 +10,21 @@ import learning.spring.model.Employee;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
-		
-		
-		Employee bean = ioc.getBean("emp1",Employee.class);
-		System.out.println(bean);
-		
-//		Constructor base declaration is required for every parameter based 
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
+
+		Employee bean1 = ioc.getBean("emp1", Employee.class);
+		Employee bean2 = ioc.getBean("emp1", Employee.class);
+		Employee bean3 = ioc.getBean("emp1", Employee.class);
+		Employee bean4 = ioc.getBean("emp1", Employee.class);
+		Employee bean5 = ioc.getBean("emp1", Employee.class);
+
+		System.out.println(bean1);
 		System.out.println(bean2);
-		
+		System.out.println(bean3);
+		System.out.println(bean4);
+		System.out.println(bean5);
+
 	}
 
 }
