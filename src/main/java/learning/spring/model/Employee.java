@@ -1,17 +1,16 @@
 package learning.spring.model;
 
-// POJO Class ---------------------------------
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Employee {
+
+public class Employee implements InitializingBean, DisposableBean {
 	private int id;
 	private String name;
 	private String gender;
 
-//	Dependencies of other POJO class !
-
 	private Address address;
 
-//	if we can't create a no argument constructor then it can bee show an acception 
 	public Employee() {
 		System.out.println("Employee.Employee()");
 
@@ -25,6 +24,18 @@ public class Employee {
 		this.address = address;
 
 		System.out.println("Employee.Employee()");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Employee.destroy()");
+
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Employee.afterPropertiesSet()");
+
 	}
 
 	private void xmlInitMethod() {
@@ -41,7 +52,6 @@ public class Employee {
 		return id;
 	}
 
-//	if we can't declare this setter then it showing an axeption 
 
 	public Address getAddress() {
 		return address;
