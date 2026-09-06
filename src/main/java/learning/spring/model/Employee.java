@@ -1,23 +1,20 @@
 package learning.spring.model;
 
-
 // POJO Class ---------------------------------
 
 public class Employee {
 	private int id;
 	private String name;
 	private String gender;
-	
-	
+
 //	Dependencies of other POJO class !
-	
+
 	private Address address;
 
-	
 //	if we can't create a no argument constructor then it can bee show an acception 
 	public Employee() {
 		System.out.println("Employee.Employee()");
-		
+
 	}
 
 	public Employee(int id, String name, String gender, Address address) {
@@ -25,9 +22,19 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
-		this.address=address;
-		
+		this.address = address;
+
 		System.out.println("Employee.Employee()");
+	}
+
+	private void xmlInitMethod() {
+		System.out.println("Employee.xmlInitMethod()");
+
+	}
+
+	private void xmlDestroyMethod() {
+		System.out.println("Employee.xmlInitMethod()");
+
 	}
 
 	public int getId() {
@@ -35,7 +42,7 @@ public class Employee {
 	}
 
 //	if we can't declare this setter then it showing an axeption 
-	
+
 	public Address getAddress() {
 		return address;
 	}
