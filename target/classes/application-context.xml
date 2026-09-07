@@ -3,40 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- bean definitions here -->
-	<!--Gatter/Setter Use !-->
 
-	<bean name="add1" class="learning.spring.model.Address">
-		<property name="city" value="puna" />
-		<property name="state" value="Maharashtra" />
+	<bean id="p1" abstract="true">
+		<property name="companyName" value="Ducat" />
+		<property name="empId" value="101" />
 	</bean>
 
-
-	<bean name="emp1" class="learning.spring.model.Employee">
-
-		<property name="id" value="1011" />
-		<property name="name" value="Anu" />
-		<property name="gender" value="Male" />
-		<property name="address" ref="add1" />
-
-	</bean>
-
-
-	<!--Constructore Use ! -->
-
-	<bean name="add2" class="learning.spring.model.Address">
-		<property name="city" value="Noida" />
-		<property name="state" value="UP" />
-	</bean>
-
-
-	<bean name="emp2" class="learning.spring.model.Employee">
-
-		<constructor-arg name="id" value="222" />
-		<constructor-arg name="name" value="Ashish" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="add2" />
-
+	<bean id="child" class="learning.spring.model.Child"
+		parent="p1">
+		<property name="salary" value="2200" />
+		<property name="age" value="22" />
 	</bean>
 
 
