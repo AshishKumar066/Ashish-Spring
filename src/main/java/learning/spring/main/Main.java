@@ -3,24 +3,24 @@ package learning.spring.main;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import learning.spring.model.Address;
 import learning.spring.model.Employee;
-
-//Step:1  add dependencies ( mvnreposatory :- spring core & spring context) 
 
 public class Main {
 
 	public static void main(String[] args) {
 		
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		Employee obj = (Employee) ioc.getBean("empA");
+		System.out.println(obj);
 		
+		obj.setAddress(obj.applyAddress());
+		System.out.println(obj);
 		
-		Employee bean = ioc.getBean("emp1",Employee.class);
-		System.out.println(bean);
-		
-//		Constructor base declaration is required for every parameter based 
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
-		
+		Address a1 = obj.applyAddress();
+		System.out.println(a1);
+	
+
 	}
 
 }
