@@ -8,7 +8,7 @@ public class DatabaseSingleton {
 
 	private static DatabaseSingleton obj = new DatabaseSingleton();
 
-	public static DatabaseSingleton getInstance() {
+	public DatabaseSingleton getInstance() {
 
 		System.out.println("DatabaseSingleton.getInstance()");
 		return obj;

@@ -2,7 +2,6 @@ package learning.spring.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import learning.spring.main.DatabaseSingleton;
 
 public class Main {
 
@@ -15,9 +14,7 @@ public class Main {
 		DatabaseSingleton obj3 = ioc.getBean("dbSingleton", DatabaseSingleton.class);
 		System.out.println(obj1);
 		System.out.println(obj2);
-		System.out.println(obj3);
-		
-		
+		System.out.println(obj3);	
 
 	}
 

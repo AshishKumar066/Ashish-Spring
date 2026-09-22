@@ -7,7 +7,7 @@
 
 	<bean id="dbSingleton"
 		class="learning.spring.main.DatabaseSingleton"
-		factory-method="getInstance"  factory-bean="db"></bean>
+		factory-method="getInstance" factory-bean="db"></bean>
 
 	<bean id="db" class="learning.spring.main.DatabaseSingleton"></bean>
 
