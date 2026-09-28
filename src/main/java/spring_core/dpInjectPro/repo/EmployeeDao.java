@@ -2,10 +2,9 @@ package spring_core.dpInjectPro.repo;
 
 import java.util.List;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-
 import spring_core.dpInjectPro.Entity.Employee;
 import spring_core.dpInjectPro.Entity.EmployeeMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class EmployeeDao {
 	
@@ -23,22 +22,17 @@ public class EmployeeDao {
 	}
 
 	public int saveEmployee(Employee e) {
-		String query = "insert into employee (id,name,salary,gender) values('" + e.getId() + "','" + e.getName() + "','" + e.getSalary() + "','"+e.getGender()+"')";
-		System.out.println(query);
-		return jdbcTemplate.update(query);
+		String query = "insert into employee (id,name,salary,gender) values (?,?,?,?)";
+		return jdbcTemplate.update(query, e.getId(), e.getName(), e.getSalary(), e.getGender());
 	}
 
 	public int updateEmployee(Employee e) {
-		String query = "update employee set name='" + e.getName() + "',salary='" + e.getSalary() + "' where id='"
-				+ e.getId() + "' ";
-		System.out.println(query);
-		return jdbcTemplate.update(query);
+		String query = "update employee set name=?, salary=? where id=?";
+		return jdbcTemplate.update(query, e.getName(), e.getSalary(), e.getId());
 	}
 
 	public int deleteEmployee(int id) {
-		String query = "delete from employee where id='" + id + "' ";
-		System.out.println(query);
-		return jdbcTemplate.update(query);
+		return jdbcTemplate.update("delete from employee where id=?", id);
 	}
 
 }

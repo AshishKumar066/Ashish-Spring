@@ -13,9 +13,11 @@ public class App {
 
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application.xml");
 		EmployeeDao edao = ioc.getBean("edao", EmployeeDao.class);
-		Employee emp1 = new Employee(11, "Anuragh", "male", 899999);
+//		Employee emp1 = new Employee(11, "Anuragh", "male", 899999);
+		Employee emp2 = new Employee(12, "Anuragh", "male", 899999);
 
 //		 edao.saveEmployee(emp1);
+		 edao.saveEmployee(emp2);
 //		 edao.updateEmployee(emp1);
 //		 edao.deleteEmployee(0);
 
