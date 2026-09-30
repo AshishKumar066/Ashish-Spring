@@ -32,7 +32,8 @@ public class EmployeeDao {
 	}
 
 	public int deleteEmployee(int id) {
-		return jdbcTemplate.update("delete from employee where id=?", id);
+//		return jdbcTemplate.update("delete from employee where id=?", id);
+		return jdbcTemplate.update("DELETE FROM employee WHERE id=?", id);
 	}
 
 }

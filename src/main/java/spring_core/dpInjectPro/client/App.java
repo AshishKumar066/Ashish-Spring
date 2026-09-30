@@ -13,19 +13,19 @@ public class App {
 
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application.xml");
 		EmployeeDao edao = ioc.getBean("edao", EmployeeDao.class);
-		
-		
-		
+
 //		Employee emp1 = new Employee(11, "Anuragh", "male", 899999);
-		Employee emp2 = new Employee(12, "Anuragh", "male", 899999);
+//		Employee emp2 = new Employee(12, "Anuragh", "male", 899999);
+//		Employee emp3 = new Employee(13, "VAIBHAV", "MALE", 800000);
 
 //		 edao.saveEmployee(emp1);
-		 edao.saveEmployee(emp2);
+//		 edao.saveEmployee(emp2);
+//		 edao.saveEmployee(emp3);
 //		 edao.updateEmployee(emp1);
 //		 edao.deleteEmployee(0);
+		 edao.deleteEmployee(12);
 
 		List<Employee> allEmp = edao.getAllEmp();
 		System.out.println(allEmp);
-
 	}
 }
