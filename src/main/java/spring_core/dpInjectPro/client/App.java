@@ -13,6 +13,9 @@ public class App {
 
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application.xml");
 		EmployeeDao edao = ioc.getBean("edao", EmployeeDao.class);
+		
+		
+		
 //		Employee emp1 = new Employee(11, "Anuragh", "male", 899999);
 		Employee emp2 = new Employee(12, "Anuragh", "male", 899999);
 
@@ -25,5 +28,4 @@ public class App {
 		System.out.println(allEmp);
 
 	}
-
 }
