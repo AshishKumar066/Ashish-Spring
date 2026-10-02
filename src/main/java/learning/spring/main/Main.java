@@ -1,8 +1,9 @@
 package learning.spring.main;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import learning.spring.model.Address;
 import learning.spring.model.Employee;
 
 //Step:1  add dependencies ( mvnreposatory :- spring core & spring context) 
@@ -10,16 +11,21 @@ import learning.spring.model.Employee;
 public class Main {
 
 	public static void main(String[] args) {
+//											(String......... basepackage); it is use for explore all classes available in project and if any class show anothation @Component then create self beans  
+		ApplicationContext ioc = new AnnotationConfigApplicationContext(learning.spring.model.Employee.class,learning.spring.model.Address.class);
 		
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
 		
+		Employee bean1 = ioc.getBean("employee",Employee.class);
+		System.out.println(bean1);
 		
-		Employee bean = ioc.getBean("emp1",Employee.class);
+		bean1.setName("AShish Kumar");
+		System.out.println(bean1);
+		
+		Object bean = ioc.getBean("address",Address.class);
+		
 		System.out.println(bean);
+		System.out.println(".............................");
 		
-//		Constructor base declaration is required for every parameter based 
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
 		
 	}
 
