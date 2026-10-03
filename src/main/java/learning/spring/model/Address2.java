@@ -1,11 +1,13 @@
 package learning.spring.model;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component(value = "add1")
-public class Address implements IAddress {
+@Primary
+@Component(value = "add2")
+public class Address2 implements IAddress {
 
-	private String city = "Noida";
+	private String city = "GZB";
 	private String state = "UP";
 
 	public String getCity() {

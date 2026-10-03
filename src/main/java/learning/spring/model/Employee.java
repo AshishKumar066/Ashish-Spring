@@ -10,25 +10,26 @@ public class Employee {
 	private int id;
 	private String name;
 	private String gender;
-	
-	
+
 	@Autowired
-	private Address address;
+	private IAddress add;
+
+//	It's working by name auto wiring 
 
 //	if we can't create a no argument constructor then it can bee show an acception 
 	public Employee() {
 		System.out.println("Employee.Employee()");
-		
+
 		id = 111;
-		
+
 	}
 
-	public Employee(int id, String name, String gender, Address address) {
+	public Employee(int id, String name, String gender, IAddress add) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
-		this.address = address;
+		this.add = add;
 	}
 
 	public int getId() {
@@ -36,20 +37,18 @@ public class Employee {
 	}
 
 //	if we can't declare this setter then it showing an axeption 
-	
-	
-	
+
 	public void setId(int id) {
 		System.out.println("Employee.setId()");
 		this.id = id;
 	}
 
-	public Address getAddress() {
-		return address;
+	public IAddress getAddress() {
+		return add;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setAddress(IAddress add) {
+		this.add = add;
 	}
 
 	public String getName() {
@@ -72,8 +71,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", " + add + "]";
 	}
 
-	
 }
