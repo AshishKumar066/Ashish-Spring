@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 //											(String......... basepackage); it is use for explore all classes available in project and if any class show anothation @Component then create self beans  
-		ApplicationContext ioc = new AnnotationConfigApplicationContext(learning.spring.model.Employee.class,learning.spring.model.Address.class);
+		ApplicationContext ioc = new AnnotationConfigApplicationContext(learning.spring.model.Employee.class,learning.spring.model.Address.class,learning.spring.model.Address2.class);
 
 		Employee bean1 = ioc.getBean("employee", Employee.class);
 		System.out.println(bean1);

@@ -1,6 +1,7 @@
 package learning.spring.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // POJO Class ---------------------------------
@@ -11,7 +12,7 @@ public class Employee {
 	private String name;
 	private String gender;
 
-	@Autowired
+	
 	private IAddress add;
 
 //	It's working by name auto wiring 
@@ -46,7 +47,8 @@ public class Employee {
 	public IAddress getAddress() {
 		return add;
 	}
-
+	@Autowired
+//	@Qualifier(value = "address2")
 	public void setAddress(IAddress add) {
 		this.add = add;
 	}
